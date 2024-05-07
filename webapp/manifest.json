@@ -1,0 +1,74 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "myapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{i18n>manifestAppTitle}",
+    "description": "{i18n>manifestAppDesc}",
+    "applicationVersion": {
+      "version": "${project.version}"
+    },
+    "dataSources": {}
+  },
+  "sap.fiori": {
+    "_version": "1.1.0",
+    "registrationIds": ["FioriId"],
+    "archeType": "analytical"
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": false
+    },
+    "supportedThemes": [
+      "sap_horizon_hcb",
+      "sap_horizon",
+      "sap_hcb",
+      "sap_bluecrystal"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.38.1",
+      "libs": {
+        "sap.m": {
+          "minVersion": "1.38.1",
+          "lazy": false
+        }
+      }
+    },
+    "extends": {
+      "component": "sap.apf.base"
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "myapp.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        },
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "rootView": {
+      "viewName": "myapp.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "config": {
+      "sapFiori2Adaptation": true
+    }
+  }
+}

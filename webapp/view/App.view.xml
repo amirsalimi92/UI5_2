@@ -1,0 +1,26 @@
+<mvc:View xmlns="sap.m" 
+        xmlns:mvc="sap.ui.core.mvc" 
+        controllerName="myapp.controller.App"
+        displayBlock="true">
+
+    <App >
+        <pages>
+            <Page title="{i18n>viewAppPageTitle}">
+                <content>
+                    <Panel headerText="{i18n>viewAppPagePanelHText}">
+                        <content>
+                            <Button text="{i18n>viewAppButtonText}" press=".onShowHelloButton" id="xxx" />
+                            <Input value="{/message/name}" 
+                                        width="30%" 
+                                        description="{/message/name}" valueLiveUpdate="true"
+                                        />                        
+                        </content>
+                    </Panel>
+                </content>
+            </Page>
+        </pages>
+    </App>
+
+    <Text text="Hello {/message/name}" />
+
+</mvc:View>
