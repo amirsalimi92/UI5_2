@@ -3,24 +3,28 @@
         controllerName="myapp.controller.App"
         displayBlock="true">
 
-    <App >
-        <pages>
-            <Page title="{i18n>viewAppPageTitle}">
-                <content>
-                    <Panel headerText="{i18n>viewAppPagePanelHText}">
-                        <content>
-                            <Button text="{i18n>viewAppButtonText}" press=".onShowHelloButton" id="xxx" />
-                            <Input value="{/message/name}" 
-                                        width="30%" 
-                                        description="{/message/name}" valueLiveUpdate="true"
-                                        />                        
-                        </content>
-                    </Panel>
-                </content>
-            </Page>
-        </pages>
-    </App>
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>viewAppPageTitle}">
+                    <content>
+                        <Panel headerText="{i18n>viewAppPagePanelHText}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                <Button text="{i18n>viewAppButtonText}" press=".onShowHelloButton" class="myCustomButton" />
+                                <Input value="{/message/name}" 
+                                            width="30%" 
+                                            description="{/message/name}" valueLiveUpdate="true"
+                                            />    
+                                <FormattedText htmlText="Hello {/message/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" 
+                                />                   
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 
-    <Text text="Hello {/message/name}" />
+        <Text text="{i18n>viewAppBottom}" />
 
 </mvc:View>

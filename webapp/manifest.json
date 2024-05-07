@@ -5,8 +5,8 @@
     "id": "myapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
-    "title": "{i18n>manifestAppTitle}",
-    "description": "{i18n>manifestAppDesc}",
+    "title": "{{i18n>manifestAppTitle}}",
+    "description": "{{i18n>manifestAppDesc}}",
     "applicationVersion": {
       "version": "${project.version}"
     },
@@ -29,7 +29,8 @@
       "sap_horizon_hcb",
       "sap_horizon",
       "sap_hcb",
-      "sap_bluecrystal"
+      "sap_bluecrystal",
+      "sap_belize"
     ]
   },
   "sap.ui5": {
@@ -42,6 +43,13 @@
           "lazy": false
         }
       }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "extends": {
       "component": "sap.apf.base"
