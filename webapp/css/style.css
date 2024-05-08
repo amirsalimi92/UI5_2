@@ -6,3 +6,12 @@ html[dir="ltr"] .myAppDemoWT .myCustomButton {
   display: inline-block;
   font-weight: bold;
 }
+
+.sapMInputBase:not(.sapMInputBaseHasEndIcons):not(.sapMInputBaseHasBeginIcons)
+  .sapMInputBaseInner {
+  background-color: lightgrey;
+}
+
+.sapMInputBaseInner {
+  font-size: 0.65rem;
+}

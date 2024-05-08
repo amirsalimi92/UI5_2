@@ -23,8 +23,6 @@ sap.ui.define(
           },
         };
 
-        console.log("hey from inside");
-
         // Create the Model here from json
         const oModel = new JSONModel(oJson);
 

@@ -5,8 +5,8 @@
     "id": "myapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
-    "title": "{{i18n>manifestAppTitle}}",
-    "description": "{{i18n>manifestAppDesc}}",
+    "title": "{i18n>manifestAppTitle}",
+    "description": "{i18n>manifestAppDesc}",
     "applicationVersion": {
       "version": "${project.version}"
     },
@@ -52,7 +52,7 @@
       ]
     },
     "extends": {
-      "component": "sap.apf.base"
+      "component": ""
     },
     "contentDensities": {
       "compact": true,

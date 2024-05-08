@@ -8,17 +8,9 @@
             <pages>
                 <Page title="{i18n>viewAppPageTitle}">
                     <content>
-                        <Panel headerText="{i18n>viewAppPagePanelHText}" class="sapUiResponsiveMargin" width="auto">
-                            <content>
-                                <Button text="{i18n>viewAppButtonText}" press=".onShowHelloButton" class="myCustomButton" />
-                                <Input value="{/message/name}" 
-                                            width="30%" 
-                                            description="{/message/name}" valueLiveUpdate="true"
-                                            />    
-                                <FormattedText htmlText="Hello {/message/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText" 
-                                />                   
-                            </content>
-                        </Panel>
+                        <mvc:XMLView viewName="myapp.view.helloPanel">
+                            
+                        </mvc:XMLView>
                     </content>
                 </Page>
             </pages>
