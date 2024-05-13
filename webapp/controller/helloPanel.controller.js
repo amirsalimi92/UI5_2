@@ -33,7 +33,6 @@ sap.ui.define(
             id: oView.getId(),
             name: "myapp.view.helloDialog",
           }).then(function (oDialog) {
-            console.log("hey from insode function");
             oView.addDependent(oDialog);
             oDialog.open();
           });
