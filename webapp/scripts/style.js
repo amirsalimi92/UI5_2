@@ -1,7 +1,4 @@
-console.log("style");
-
 setTimeout(() => {
-  console.log("after 3 seconds");
   let numbers = document.querySelectorAll(".objectList .sapMObjectNumberText");
 
   for (const key of numbers) {
