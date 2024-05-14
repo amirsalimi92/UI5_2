@@ -12,9 +12,9 @@
                             press=".onShowHelloDialog"/>
                     </headerContent>
                     <content>
-                        <mvc:XMLView viewName="myapp.view.helloPanel">
+                        <mvc:XMLView viewName="myapp.view.helloPanel"/>
+                        <mvc:XMLView viewName="myapp.view.invoiceList"/>
                             
-                        </mvc:XMLView>
                     </content>
                 </Page>
             </pages>
