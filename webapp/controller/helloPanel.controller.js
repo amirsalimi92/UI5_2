@@ -1,8 +1,6 @@
-console.log("hey from hello panel");
-
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/core/Fragment", "sap/m/MessageToast"],
-  function (Controller, Fragment, MessageToast) {
+  ["sap/ui/core/mvc/Controller", "sap/m/MessageToast"],
+  function (Controller, MessageToast) {
     "use strict";
 
     return Controller.extend("myapp.controller.helloPanel", {
@@ -22,24 +20,32 @@ sap.ui.define(
       },
 
       onShowHelloDialog: function () {
-        // Get view
-        const oView = this.getView();
-
-        // We check is there the Dialog in the page now?
-        // If not then create it
-        // If there isFinite, then show it
-        if (!this.byId("helloDialogId")) {
-          Fragment.load({
-            id: oView.getId(),
-            name: "myapp.view.helloDialog",
-          }).then(function (oDialog) {
-            oView.addDependent(oDialog);
-            oDialog.open();
-          });
-        } else {
-          this.byId("helloDialogId").open();
-        }
+        this.getOwnerComponent().openPopup();
       },
     });
   }
 );
+
+// Inside the onShowHelloDialog:
+//   // Get view
+//   const oView = this.getView();
+
+//   // We check is there the Dialog in the page now?
+//   // If not then create it
+//   // If there isFinite, then show it
+//   if (!this.byId("helloDialogId")) {
+//     Fragment.load({
+//       id: oView.getId(),
+//       name: "myapp.view.helloDialog",
+//       controller: this,
+//     }).then(function (oDialog) {
+//       oView.addDependent(oDialog);
+//       oDialog.open();
+//     });
+//   } else {
+//     this.byId("helloDialogId").open();
+//   }
+
+// onCloseDialog: function () {
+//   this.byId("helloDialogId").close();
+// },

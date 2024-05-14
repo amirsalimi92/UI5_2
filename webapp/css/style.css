@@ -15,3 +15,7 @@ html[dir="ltr"] .myAppDemoWT .myCustomButton {
 .sapMInputBaseInner {
   font-size: 0.65rem;
 }
+
+.sapMDialog .sapMDialogScrollCont > * {
+  display: block;
+}

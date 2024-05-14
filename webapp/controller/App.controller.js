@@ -1,6 +1,8 @@
-console.log("hey from conreoller");
-
 sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
   "use strict";
-  return Controller.extend("myapp.controller.App", {});
+  return Controller.extend("myapp.controller.App", {
+    onShowHelloDialog: function () {
+      this.getOwnerComponent().openPopup();
+    },
+  });
 });

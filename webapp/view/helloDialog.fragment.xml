@@ -1,5 +1,16 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
     
-    <Dialog id="helloDialogId" title="Hello {/message/name} from Dialog!"/>
+    <Dialog id="helloDialogId" title="Hello {/message/name} from Dialog!">
+        <content>
+            <core:Icon src="sap-icon://theater"
+                        size="8rem"
+                        class="sapUiSmallMargin"            
+            />
+        </content>
+        <beginButton>
+            <Button icon="sap-icon://decline"
+                    press=".onClosePopup"/>
+        </beginButton>
+    </Dialog>
 
 </core:FragmentDefinition>

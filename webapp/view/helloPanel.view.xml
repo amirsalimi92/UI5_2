@@ -5,6 +5,7 @@
             <Panel headerText="{i18n>viewHelloPanelPagePanelHText}" class="sapUiResponsiveMargin" width="auto">
                 <content>
                     <Button text="{i18n>viewHelloPanelButtonDialog}"
+                        icon="sap-icon://hello-world"
                         press=".onShowHelloDialog" class="sapUiSmallMarginEnd"
                         />
                     <Button text="{i18n>viewHelloPanelButtonText}" 

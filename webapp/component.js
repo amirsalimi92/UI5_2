@@ -1,6 +1,11 @@
 sap.ui.define(
-  ["sap/ui/core/UIComponent", "sap/ui/model/json/JSONModel"],
-  function (UIComponent, JSONModel) {
+  [
+    "sap/ui/core/UIComponent",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/resource/ResourceModel",
+    "./scripts/helloPopup",
+  ],
+  function (UIComponent, JSONModel, ResourceModel, helloPopup) {
     "use strict";
 
     return UIComponent.extend("myapp.component", {
@@ -26,6 +31,18 @@ sap.ui.define(
 
         // Set the model and define it to the View
         this.setModel(oModel);
+
+        // Set Popup hello Dialog
+        this._helloPopup = new helloPopup(this.getRootControl());
+      },
+
+      exit: function () {
+        this._helloPopup.destroy();
+        delete this._helloPopup;
+      },
+
+      openPopup: function () {
+        this._helloPopup.open();
       },
     });
   }
