@@ -5,7 +5,8 @@
         items="{invoice>/Invoices}">
 
         <items>
-            <ObjectListItem 
+            <ObjectListItem
+            class="objectList" 
                 title="{invoice>Quantity} x {invoice>ProductName}"
                 number="{
                     parts: [{path: 'invoice>ExtendedPrice'}, 
@@ -14,7 +15,10 @@
                     formatOptions: {
                     showMeasure: false
                 }}"
-                numberUnit="{view>/currency}"/>
+                numberUnit="{view>/currency}"
+                numberState=
+                  "{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
+                />
         </items>
     </List>
 

@@ -9,6 +9,8 @@ sap.ui.define(
           currency: "EUR",
         });
         this.getView().setModel(oViewModel, "view");
+
+        console.log("invoices");
       },
     });
   }
